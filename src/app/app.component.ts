@@ -1,10 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app',
+  template: '<checkNum></checkNum>',
 })
-export class AppComponent {
-  title = 'AngularExam';
-}
+export class AppComponent {}
