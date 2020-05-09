@@ -6,11 +6,23 @@ import { Component } from '@angular/core'
 })
 export class checknumber {
 
-  public numberval1;
-  public numberval2;
+  public numberval1 = null
+  public numberval2 = null
+  public finaltext = null
 
   validateNum(){
-
+    if(this.numberval1 != null && this.numberval2 != null)
+    {
+      let counter = 0
+      this.finaltext = ''
+      for (let index = this.numberval1; index < this.numberval2; index++) {
+        if(index % 2 == 0)
+        {
+          counter++
+          this.finaltext = this.finaltext + index + ','
+        }        
+      }
+      this.finaltext  = "There are " + counter + " even numbers " + this.finaltext
+    }
   }
-
 }
