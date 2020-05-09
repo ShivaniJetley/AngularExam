@@ -11,6 +11,8 @@ export class checknumber {
   public finaltext = null
 
   validateNum(){
+    if(!isNaN(this.numberval1) && !isNaN(this.numberval1) && this.numberval1 > 0 && this.numberval2 > 0)
+    {
     if(this.numberval1 != null && this.numberval2 != null)
     {
       let counter = 0
@@ -25,4 +27,9 @@ export class checknumber {
       this.finaltext  = "There are " + counter + " even numbers " + this.finaltext
     }
   }
+  else
+  {
+    this.finaltext  = "Either of the input is not valid"
+  }
+}
 }
